@@ -1,0 +1,1866 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    color: black;
+
+}
+
+#HomeHeader {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    top: 0;
+    z-index: 5;
+    background-color: black;
+    position: fixed;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.headerInnerContainer {
+    width: 95%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 100px;
+
+}
+
+.logo strong {
+    font-size: 1.20em;
+    padding-left: 8px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.links {
+    width: 950px;
+    display: flex;
+    align-items: center;
+
+}
+
+.links ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    font-size: 1.10em;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.links ul li a {
+    display: flex;
+    /* color: black; */
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.links ul li a svg {
+    width: 24px;
+
+}
+
+.links ul li a strong {
+    margin-left: 10px;
+
+}
+
+.links ul li {
+    display: flex;
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.links ul li svg {
+    width: 25px;
+    cursor: pointer;
+
+}
+
+.links ul li strong {
+    margin-left: 10px;
+
+}
+
+
+#PhoneUilinks {
+    display: none;
+}
+
+@media (max-width: 943px) {
+    .links {
+        display: none;
+
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    #PhoneUilinks {
+        width: 50%;
+        display: flex;
+        float: right;
+        align-items: center;
+        justify-content: end;
+
+    }
+
+    .menu {
+        display: flex;
+        color: white;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .menu strong {
+        font-size: 1.30em;
+        padding-right: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .menu svg {
+        width: 25px;
+        cursor: pointer;
+    }
+
+    .logo strong {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+#cartbar {
+    top: 0;
+    right: 0;
+    width: 28%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+    position: fixed;
+    animation-name: cartbar;
+    animation-duration: 0.50s;
+    animation-iteration-count: calc(1);
+    background-color: rgb(213, 213, 213);
+}
+
+.headercart {
+    width: 100%;
+    display: flex;
+    height: 100px;
+    color: white;
+    align-items: center;
+    background-color: chocolate;
+    animation-name: smoothaftersee;
+    animation-duration: 2s;
+    animation-iteration-count: calc(1);
+    justify-content: space-evenly;
+}
+
+.closecart {
+    width: 10%;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.closecart strong {
+    cursor: pointer;
+
+}
+
+#closeButton svg {
+    width: 28px;
+}
+
+.nameTitle {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nameTitle strong {
+    font-size: 1.50em;
+    margin-right: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conatinerBuyThings {
+    width: 98%;
+    height: 400px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(153, 153, 153);
+}
+
+#HowMuchForProducts {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    margin-top: 30px;
+}
+
+#HowMuchForProducts strong {
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.productsElementsAddedCartContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.innerAddedCart {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    height: fit-content;
+    padding-bottom: 3px;
+    border-bottom: 1px solid gray;
+}
+
+.innerAddedCart img {
+    width: 50%;
+    border-radius: 6px;
+}
+
+.addRemoveButtonAndContentContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.addRemoveButtonAndContentContainer strong {
+    font-size: 1.25em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.threeMainButtonForCart {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    background-color: black;
+}
+
+.threeMainButtonForCart button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.10em;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: black;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#HowmuchAdded {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+@keyframes cartbar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 28%;
+    }
+}
+
+@keyframes smoothaftersee {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#homepage {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    height: fit-content;
+    margin-bottom: 100px;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.innercontainerhomepage {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+    height: fit-content;
+
+}
+
+
+.rowhome {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    overflow-y: scroll;
+    justify-content: center;
+
+}
+
+.rowhome img {
+    width: 400px;
+    height: 300px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: 0.50s;
+}
+
+.rowhome img:hover {
+    transition-duration: 0.50s;
+    border-radius: 5%;
+}
+
+#HomePageOpenImagesContainer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.367);
+    justify-content: center;
+    z-index: 6;
+    /* display: b; */
+    align-items: center;
+}
+
+.IamInHomePapgeOpenImages {
+    width: 80%;
+    height: 500PX;
+    background-color: white;
+    border-radius: 7px;
+    display: flex;
+    animation-name: AnimationForHomePageOpenImagesContainer;
+    animation-duration: 0.50s;
+    animation-iteration-count: calc(1);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.IamInHomePapgeOpenImages img {
+    width: 500px;
+    height: 400px;
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-iteration-count: calc(1);
+    object-fit: cover;
+    border-radius: 8px;
+    animation-name: animationForIamInHomePapgeOpenImagesimg;
+    animation-duration: 2s;
+    animation-iteration-count: calc(1);
+}
+
+.IamInHomePapgeOpenImages svg {
+    width: 30px;
+    height: 30px;
+    float: right;
+    position: relative;
+    bottom: 210px;
+    left: 222px;
+    cursor: pointer;
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-iteration-count: calc(1);
+    padding: 8px;
+    border-radius: 1000px;
+    background-color: white;
+}
+
+@keyframes animationForIamInHomePapgeOpenImagesimg {
+    0% {
+        width: 100px;
+        height: 100px;
+        transform: rotate(45deg);
+    }
+
+    25% {
+        width: 200px;
+        height: 200px;
+        transform: rotate(90deg);
+    }
+
+    50% {
+        width: 300px;
+        height: 300px;
+        transform: rotate(135deg);
+    }
+
+    75% {
+        width: 400px;
+        height: 340px;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        width: 500px;
+        height: 400px;
+        transform: rotate(0);
+    }
+}
+
+.IamInHomePapgeOpenImages svg:hover {
+    background-color: wheat;
+}
+
+@keyframes AnimationForHomePageOpenImagesContainer {
+    0% {
+        transform: rotatex(0);
+    }
+
+    100% {
+        transform: rotatex(180deg);
+    }
+}
+
+#Newcoursecontainer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.headingforcoursenamecontainer {
+    width: 640px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    justify-content: center;
+
+}
+
+.elelmentsin {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.elelmentsin strong {
+    margin: 20px;
+
+    font-size: 1.20em;
+
+}
+
+.ah1 {
+    font-size: 50px;
+    font-weight: 100;
+    margin: 20px;
+
+    font-family: sans-serif;
+}
+
+.bh1 {
+    font-weight: 100;
+    margin: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#inrollnow {
+    border: none;
+    width: 200px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: black;
+
+}
+
+.imageforcourserheadingrealeted {
+    width: 700px;
+    height: fit-content;
+
+}
+
+.imagein {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    transition-duration: 0.50s;
+    background-image: url(download-16.webp);
+}
+
+@media (max-width: 1064px) {
+    #Newcoursecontainer {
+        flex-direction: column;
+        justify-content: start;
+        height: fit-content;
+
+
+    }
+
+    .headingforcoursenamecontainer {
+        width: 100%;
+        margin: 30px;
+
+    }
+
+    .elelmentsin strong {
+
+        margin-left: 0;
+
+    }
+
+    .ah1,
+    .bh1,
+    #inrollnow {
+        margin-left: 0;
+    }
+
+    .imageforcourserheadingrealeted {
+        width: 90%;
+
+    }
+
+    .imagein {
+        background-position: right;
+    }
+}
+
+
+#achievementsContiner {
+    width: 100%;
+    margin-top: 100px;
+    height: fit-content;
+
+}
+
+.headingtilteachievement {
+    width: 100%;
+    text-align: center;
+
+}
+
+.headingtilteachievement strong {
+    font-size: 2.10em;
+    font-family: sans-serif;
+}
+
+.containerelelementshow {
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    height: fit-content;
+    justify-content: center;
+
+}
+
+.PC_DI_CG {
+    width: 150vh;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+.projectsCompleted {
+    width: 250px;
+    height: 260px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.digitalProducts {
+    width: 250px;
+    height: 260px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: 2px solid black;
+
+}
+
+.CostomersGlobally {
+    width: 250px;
+    height: 260px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: 2px solid black;
+
+}
+
+.projectsCompleted p {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.digitalProducts p {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.CostomersGlobally p {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.ah2 {
+    font-size: 1.20em;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#productsConatiner {
+    width: 100%;
+    margin-top: 100px;
+    height: fit-content;
+
+}
+
+.headingproducts {
+    width: 100%;
+    font-size: 2.50em;
+    text-align: center;
+    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.productshowingpage {
+    width: 1250px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.productOne {
+    width: 400px;
+    height: 380px;
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    background-color: white;
+}
+
+.productImage {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    background-size: cover;
+    transition-duration: 0.20s;
+    background-image: url(https://www.shutterstock.com/image-vector/vector-3d-elegant-cosmetic-products-260nw-1840263511.jpg);
+}
+
+.productImage:hover {
+    border-radius: 0px;
+    background-position-y: calc(-10px);
+
+}
+
+.downloadImage {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+    float: right;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background-color: aliceblue;
+
+}
+
+.downloadImage svg {
+    width: 25px;
+    height: 25px;
+}
+
+.productNameTilele {
+    width: 100%;
+    height: 100px;
+
+}
+
+#HeadingNameForProduct {
+    margin-top: 6%;
+    margin-left: 2%;
+    font-size: 1.20em;
+    font-family: sans-serif;
+}
+
+#PriceForProduct {
+    margin-top: 3%;
+    margin-left: 2%;
+    font-size: 1.20em;
+    font-family: sans-serif;
+}
+
+#OfferProduct {
+    text-decoration: line-through;
+}
+
+.productByButton {
+    width: 100%;
+    height: 180px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid gray;
+    justify-content: center;
+}
+
+.productByButton button {
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-size: 1.10em;
+    border: none;
+    transition-duration: 0.25s;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.productByButton button:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+.moroProductsButtonToMoveProductsPage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-top: 50px;
+}
+
+.moroProductsButtonToMoveProductsPage button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.moroProductsButtonToMoveProductsPage button:hover {
+    background-color: rgb(48, 48, 48);
+}
+
+
+@media (max-width: 600px) {
+    .productshowingpage {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .productOne {
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+}
+
+#aboutDesiginerFirstContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+#DesignerAbout {
+    width: 200vh;
+    margin-top: 100px;
+    height: fit-content;
+    display: flex;
+    padding-top: 20px;
+    height: fit-content;
+}
+
+.DesignerImageContainer {
+    width: 50%;
+    height: fit-content;
+}
+
+.desiginerImageAdd {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-image: url(aditya.jpeg);
+}
+
+.someTextForDesignerContainer {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.desiginerAbouttext {
+    width: 100%;
+
+
+
+}
+
+.desiginerAbouttext h1 {
+    font-size: 2.20em;
+    margin-left: 10%;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.desiginerAbouttext strong {
+    margin-left: 10%;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.desiginerAbouttext p {
+    font-size: 1em;
+    line-height: 30px;
+    margin-left: 10%;
+    color: rgb(58, 58, 58);
+    font-family: sans-serif;
+}
+
+.followerShow {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+
+}
+
+
+.rowInstragramYoutube {
+    margin: 10px;
+    padding: 10px;
+    margin-left: 7%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ininsta {
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+}
+
+.ininsta h2 {
+    font-size: 2em;
+}
+
+.inyout {
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
+}
+
+.inyout h2 {
+    font-size: 2em;
+}
+
+.rowUploadedViews {
+    margin: 10px;
+    padding: 10px;
+    margin-left: 7%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.inuploade {
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
+}
+
+.inuploade h2 {
+    font-size: 2em;
+}
+
+.inviews {
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+}
+
+.inviews h2 {
+    font-size: 2em;
+}
+
+@media (max-width: 978px) {
+    #DesignerAbout {
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .DesignerImageContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desiginerImageAdd {
+        width: 90%;
+        background-position: center;
+        border-radius: 10px;
+
+    }
+
+    .someTextForDesignerContainer {
+        width: 100%;
+    }
+
+    .inuploade {
+        margin-bottom: 12px;
+    }
+
+    .ininsta {
+        margin-bottom: 12px;
+    }
+
+    .desiginerAbouttext {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .desiginerAbouttext h1,
+    strong,
+    p {
+        margin-left: 0;
+    }
+
+    .desiginerAbouttext strong {
+        margin-left: 0;
+
+    }
+
+    .desiginerAbouttext p {
+        margin-left: 0;
+
+
+    }
+}
+
+#clientsIhAVEContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 50px;
+}
+
+.headingclients {
+    width: 100%;
+    height: 100px;
+    font-size: 1.50em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.SsiginUpContainerFirst {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+
+}
+
+#siginUpContainer {
+    width: 190vh;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+
+
+
+}
+
+.someTextAboutSiginUp {
+    display: flex;
+    justify-content: center;
+    align-self: safe;
+    width: 40%;
+
+
+}
+
+.contentIn {
+    width: 90%;
+    text-align: center;
+
+}
+
+.contentIn h1 {
+    font-size: 2.40em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+
+.contentIn p {
+    padding-bottom: 10px;
+    font-size: 1.20em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contentIn strong {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.formConatiner {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.formConatiner form {
+    width: 90%;
+    text-align: center;
+
+}
+
+form input {
+    width: 225px;
+    height: 40px;
+    font-size: 1em;
+    border: none;
+    margin-top: 9px;
+    font-weight: lighter;
+    padding-left: 5px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form input:hover {
+    border: 1px solid black;
+}
+
+#Message {
+    width: 465px;
+    margin-top: 10px;
+    font-size: 1.10em;
+    font-weight: lighter;
+    padding-left: 5px;
+    line-height: 30px;
+    font-family: sans-serif;
+    border: none;
+    border-bottom: 1px solid black;
+
+
+}
+
+#Message:hover {
+    border: 1px solid black;
+}
+
+#Submit {
+    width: 471px;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    transition-duration: 0.30s;
+    background-color: black;
+}
+
+#Submit:hover {
+    background-color: #15222e;
+}
+
+@media (max-width: 1050px) {
+
+    #siginUpContainer {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .someTextAboutSiginUp {
+        width: 100%;
+
+
+    }
+
+    .contentIn {
+        padding-bottom: 20px;
+        text-align: start;
+
+    }
+
+    .formConatiner {
+        width: 100%;
+
+    }
+
+    .formConatiner form {
+        width: 100%;
+
+    }
+
+    #Message {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    #Subject {
+        width: 20px;
+    }
+
+    .formConatiner form input {
+        width: 90%;
+    }
+
+    #Submit {
+        width: 92%;
+    }
+}
+
+
+/* THIS IS BOTTOM LANDING PAGE STYLIG CSS */
+#The_footer {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    min-height: fit-content;
+
+
+
+}
+
+.social-icons {
+    display: flex;
+    color: black;
+    justify-content: space-evenly;
+}
+
+.social-icons a {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    color: black;
+    display: flex;
+    border-radius: 100%;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    border: 1px solid black;
+    transition-duration: 0.50s;
+
+
+}
+
+.social-icons a:hover {
+    border-color: #f98167;
+
+
+}
+
+.father {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.link_follow {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-evenly;
+    border-top: 2px solid #374151;
+    border-bottom: 2px solid #374151;
+
+
+}
+
+.link_follow ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+
+
+}
+
+@media (max-width:915px) {
+    .link_follow li {
+        display: none;
+    }
+
+    .link_follow {
+        width: 90%;
+        justify-content: center;
+    }
+
+
+}
+
+.link_follow li {
+    padding: 10px;
+    border-left: 1px solid #374151;
+
+
+}
+
+.link_follow a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+/* THE END BOTTOM LANDING PAGE STYLING CSS */
+
+
+#sidebarcontainer {
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    z-index: 5;
+    animation-name: screenblur;
+    animation-duration: 0.50s;
+    animation-iteration-count: calc(1);
+    background-color: #15222e;
+}
+
+.headingFoRSidebar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    animation-duration: 4s;
+    justify-content: center;
+    animation-name: smoothaftersee;
+    animation-iteration-count: calc(1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.257);
+
+}
+
+.closebuttonContainer {
+    width: 20%;
+
+}
+
+.closebuttonContainer strong {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.graphicsTextContainer {
+    width: 80%;
+    text-align: center;
+
+}
+
+.graphicsTextContainer p {
+    font-size: 2em;
+    color: #72a24d;
+    margin-right: 15%;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.linksInSidebarContainer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    margin-top: 40px;
+    animation-name: smoothaftersee;
+    animation-duration: 3s;
+    animation-iteration-count: calc(1);
+    justify-content: center;
+
+}
+
+.linksInSidebarContainer ul {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+}
+
+.linksInSidebarContainer ul li {
+    width: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 3px;
+    background-color: gainsboro;
+
+}
+
+.linksInSidebarContainer ul li a {
+    font-size: 1.20em;
+    color: #72a24d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+.linksInSidebarContainer ul li strong {
+    font-size: 1.20em;
+    color: #72a24d;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+.linksInSidebarContainer ul li svg {
+    width: 25px;
+    padding-left: 5px;
+
+}
+
+#blurallscreen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    display: none;
+    animation-name: smoothaftersee;
+    animation-duration: 0.50s;
+    animation-iteration-count: calc(1);
+    background-color: rgba(213, 213, 213, 0.267);
+}
+
+@keyframes screenblur {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+
+
+
+/* This is courses of styling all pages and this page of links is different */
+#homepagecourse {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.innerhomepagecourses {
+    width: 800px;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: rgb(231, 231, 231);
+}
+
+.innerhomepagecourses h1 {
+    width: fit-content;
+    margin-bottom: 5px;
+    font-weight: lighter;
+    border-bottom: 2px solid rgba(182, 182, 182, 0.443);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.innerhomepagecourses p {
+    line-height: 25px;
+}
+
+#coursershowingpage {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    height: fit-content;
+    justify-content: center;
+}
+
+.couesContainerAdded {
+    width: 1100px;
+    padding-bottom: 20px;
+
+}
+
+.innercourserAdded {
+    width: 100%;
+    display: flex;
+}
+
+.imageforcoursercontainer {
+    width: 50%;
+
+
+}
+
+.imageforcoursercontainer img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 7px;
+    /* height: 300px; */
+}
+
+.contentforcoursecotainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contentforcoursecotainer H1 {
+    font-size: 2.20em;
+    margin-left: 25%;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contentforcoursecotainer button {
+    width: 140px;
+    height: 40px;
+    border: none;
+    color: white;
+    margin-left: 25%;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    background-color: #15222e;
+}
+
+.contentforcoursecotainer button:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+@media (max-width: 1109px) {
+    .innercourserAdded {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageforcoursercontainer {
+        width: 90%;
+    }
+
+    .imageforcoursercontainer img {
+        width: 90%;
+    }
+
+    .contentforcoursecotainer {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .contentforcoursecotainer h1 {
+        margin: 0;
+        line-height: 40px;
+    }
+
+    .contentforcoursecotainer button {
+        margin: 0;
+        margin-left: -2px;
+        margin-top: 10px;
+    }
+}
+
+#courserDetailShowingpage {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-iteration-count: calc(1);
+    background-color: rgb(255, 255, 255);
+}
+
+.heaederforbacktocourspage {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+}
+
+.heaederforbacktocourspage strong {
+    font-size: 3em;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+#imageOpinghereOfCourse {
+    width: 90%;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+}
+
+#imageCoursForOpen {
+    width: 90%;
+    border-radius: 5px;
+    object-fit: cover;
+
+}
+
+.contetndetails {
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+}
+
+.contetndetails h1 {
+    line-height: 50px;
+    font-size: 2em;
+    color: #766de8;
+}
+
+.contetndetails p {
+    line-height: 50px;
+    display: flex;
+
+    align-items: center;
+    font-size: 1.20em;
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#getStart {
+    margin-top: 25px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    border-radius: 100px;
+    cursor: pointer;
+    background: linear-gradient(#afa8f8, #6159b8);
+}
+
+@media (max-width: 500px) {
+    #imageOpinghereOfCourse {
+        height: 300px;
+    }
+}
+
+/* The end ourses of styling all pages and this page of links is different*/
+
+/* This is styling for Blogs html  page*/
+.BlogWelcomeHeadingContainer {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.innerChildBlogHeading {
+    width: fit-content;
+    height: 30px;
+    margin-bottom: -80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#blogsConatiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    height: fit-content;
+}
+
+.innerBlogsConatiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1100px;
+    height: fit-content;
+
+
+
+}
+
+.blogsOneAdded {
+    margin: 20px;
+    width: 300px;
+    border-radius: 4px;
+    padding: 10px;
+    transition-duration: 0.50s;
+    box-shadow: 4px 3px 20px 0px rgb(158, 158, 158);
+    border: 1px solid rgb(187, 187, 187);
+    height: fit-content;
+
+}
+
+.videosConatainer {
+    width: 100%;
+
+}
+
+.videosConatainer iframe {
+    width: 100%;
+    border-radius: 5px;
+    height: 200px;
+}
+
+.profileOnyoutubeConatainer {
+    width: 100%;
+    margin-top: 25px;
+    border-bottom: 1px solid rgb(175, 173, 173);
+    display: flex;
+    padding-bottom: 5px;
+
+}
+
+.prifileImage {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.prifileImage a {
+    display: flex;
+    color: black;
+    align-items: center;
+    font-size: 1.20em;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.prifileImage a strong {
+    padding-left: 8px;
+
+}
+
+.prifileImage img {
+    width: 40px;
+    border-radius: 100px;
+}
+
+.options {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.options svg {
+    width: 5.50px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 4%;
+    border-radius: 100px;
+}
+
+.options svg:hover {
+    background-color: rgba(166, 166, 166, 0.586);
+}
+
+.contentForVideoContainer {
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.contentForVideoContainer h1 {
+    font-size: 1.80em;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contentForVideoContainer p {
+    font-size: 1em;
+    line-height: 25px;
+    margin-left: 10px;
+    color: rgb(75, 75, 75);
+    text-rendering: geometricPrecision;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttonfullscreenContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.buttonfullscreenContainer button {
+    width: 98%;
+    height: 40px;
+    font-size: 1.10em;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+}
+
+#ThisIsFullScreenContainerFoeOpenPage {
+    width: 100%;
+    height: 600px;
+    display: none;
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-iteration-count: calc(1);
+
+}
+
+#headingForFullScreen {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+}
+
+#closeButtonForFullScreen {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    transition-duration: 0.50s;
+    cursor: pointer;
+}
+
+#closeButtonForFullScreen:hover {
+    background-color: rgba(194, 194, 194, 0.479);
+}
+
+#closeButtonForFullScreen svg {
+    width: 35px;
+}
+
+.Realframecontainer {
+    max-width: 90%;
+    width: 1200px;
+    margin: 0 auto;
+    height: fit-content;
+
+}
+
+.Realframecontainer iframe {
+    width: 100%;
+    border-radius: 5px;
+    height: 500px;
+    margin-top: 30px;
+    border: 2px solid gray;
+
+
+}
+
+@media (max-width: 500px) {
+    .Realframecontainer iframe {
+        height: 400px;
+    }
+}
+
+/* The end of styling css Blongs html page */
